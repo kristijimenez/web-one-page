@@ -1,0 +1,273 @@
+
+:root{
+    --green: #6b8d62;
+    --black: #1b1b1b;
+    --greenlight: #b0d39f;
+    --white: #F7F6DC;
+    --title: 35px;
+    --text: 19px;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+
+/* biseles */
+
+.bisel-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+}
+.bisel-arriba{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+}
+
+
+/* menú navegación */
+
+#inicio{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo{
+    margin-left: 20px;
+
+}
+
+.menu .logo h1 a{
+    text-decoration: none;
+    font-size: var(--title);
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .lista-content{
+    margin-right: 20px;
+}
+
+.menu .lista-content ul{
+    display: flex;
+    
+}
+
+.menu .lista-content ul li{
+    list-style: none;
+}   
+
+.menu .lista-content ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    font-size: 17px;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+.menu .lista-content ul li a:hover{
+    background-color: var(--green);
+    color: white;
+}
+
+.menu .lista-content ul li a.active{
+    background-color: var(--green);
+    color: white;
+}
+
+/* imagen header */
+
+.img-header{
+    position: relative;  /* poner relative siempre que vayamos a modificar el contenido de dentro */
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/images/inicio3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.img-header .bienvenido{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* esto es para crear una capa para orcurecer un poco el backgroun */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .bienvenido h1{
+    font-size: 50px;
+    color: white;
+    font-weight: 200;
+}
+
+.img-header .bienvenido p{
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+
+.img-header .bienvenido button{
+    width: 120px;
+    height: 30px;
+    color: white;
+    background-color: var(--greenlight);
+    font-weight: 15px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.img-header .bienvenido > button:hover{
+    background-color: var(--green);
+}
+
+
+/* section: nosotros */
+
+.nosotros{
+    margin-top: 120px;
+    width: 100%;
+}
+
+.nosotros .n-container{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nosotros .n-container h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--black);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nosotros .n-container p{
+    font-size: 1rem;
+    color: var(--black);
+    text-align: center;
+    margin: 10px 0;
+    line-height: 35px;
+
+}
+
+.nosotros .n-galery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+
+.nosotros .n-galery .n-img{
+    width: 25%;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nosotros .n-container .n-button{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--green);
+    color: #FFFFFF;
+    border-style: none;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.nosotros .n-container > button:hover{
+    background-color: var(--greenlight);
+    color: var(--green);
+}
+
+.proyectos{
+    width: 100%;
+    height: 100%;
+    background-image: var(--greenlight);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 100px;
+}
+
+/* .proyectos .p-galery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+.proyectos .p-galery .p-img{
+    width: 400px;
+    margin: 10px;
+    border-radius: 30px;
+}
+ */
+
+
+.testimonios .t-galery{
+
+}
+
+
+
+.testimonios .t-galery .t-img{
+    
+}
